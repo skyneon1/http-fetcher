@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP Request Fetcher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>HTTP Request Fetcher</h1>
+    <form id="requestForm" class="form">
+      <div>
+        <label for="url">URL:</label>
+        <input type="text" id="url" required placeholder="https://example.com">
+      </div>
+      <div>
+        <label for="method">Method:</label>
+        <select id="method">
+          <option value="GET">GET</option>
+          <option value="POST">POST</option>
+          <option value="PUT">PUT</option>
+          <option value="DELETE">DELETE</option>
+        </select>
+      </div>
+      <div>
+        <label for="headers">Headers (JSON):</label>
+        <textarea id="headers" placeholder='{"Content-Type": "application/json"}'></textarea>
+      </div>
+      <div id="bodyContainer">
+        <label for="body">Body:</label>
+        <textarea id="body" placeholder='{"key": "value"}'></textarea>
+      </div>
+      <button type="submit">Send Request</button>
+    </form>
+
+    <div id="responseSection">
+      <h2>Response</h2>
+      <pre id="responseOutput"></pre>
+    </div>
+
+    <div id="historySection">
+      <h2>Request History</h2>
+      <ul id="requestHistory"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
