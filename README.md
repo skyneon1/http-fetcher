@@ -17,7 +17,8 @@ A lightweight Node.js-based tool for making HTTP requests with ease. This projec
    cd http-fetcher  
 2. Install dependencies:
    ```bash
-   npm install  
+   npm install
+   node server.js
 3. Basic Example:
    const fetcher = require('http-fetcher');  
 
